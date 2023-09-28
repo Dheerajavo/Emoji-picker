@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Emoji Picker Button Example</h1>
+        <input type="text">
+        <button id="emoji-button">😀</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            EmojiButton(document.querySelector('#emoji-button'), function (emoji) {
+                document.querySelector('input').value += emoji;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
